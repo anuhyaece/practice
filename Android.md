@@ -80,7 +80,22 @@
 
 | **Usage Purpose**         | General computing, development, servers                   | Mobile computing, apps, touch-based UI                             |
 
+
+**Android Boot Process (When You Power On):**
+
+    **Bootloader:** Initializes hardware and loads the kernel.
     
+    **Linux Kernel:** Starts managing CPU, memory, drivers.
+    
+    **Init:** Android’s init process starts system services (like Wi-Fi, Bluetooth).
+    
+    **Zygote:** A special process that loads common app code (Java libraries) and starts apps quickly by forking.
+    
+    **System Server:** Starts Android’s core services (WindowManager, PackageManager, etc.).
+    
+    **Home/Launcher App:**The main screen you see (with icons and widgets) starts.
+
+   
     
 
     
