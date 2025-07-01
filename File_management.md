@@ -26,7 +26,7 @@ int main()
     }
     printf("the data is successfully written to the file\n");
 }
-```c
+```
 
 ### 2. Develop a C program to open an existing text file and display its contents?
 ```c
@@ -54,7 +54,7 @@ int main()
     buf[ret]='\0';
     printf("the data read from the file is %s\n",buf);
 }
-```c
+```
 
 ### 3. Implement a C program to create a new directory named "Test" in the current directory?
 ```c
@@ -70,7 +70,7 @@ int main()
     else
         printf("the test directory is not created\n");
 }
-```c
+```
 
 ### 4. Write a C program to check if a file named "sample.txt" exists in the current directory?
 ```c
@@ -86,7 +86,7 @@ int main()
     else
         printf("the file doesn't exists in the directory\n");
 }
-```c
+```
 
 ### 5. Develop a C program to rename a file from "oldname.txt" to "newname.txt"?
 ```c
@@ -102,7 +102,7 @@ int main()
     else
         printf("the file name is not renamed successfully\n");
 }
-```c
+```
 
 ### 6. Implement a C program to delete a file named "delete_me.txt"?
 ```c
@@ -118,7 +118,7 @@ int main()
     else
         printf("the file name is not removed successfully\n");
 }
-```c
+```
 
 ### 7. Write a C program to copy the contents of one file to another?
 ```c
@@ -160,7 +160,7 @@ int main()
     close(fd);
     close(fd1);
 }
-```c
+```
 
 ### 8. Develop a C program to move a file from one directory to another?
 ```c
@@ -204,7 +204,7 @@ int main()
     close(fd);
     close(fd1);
 }
-```c
+```
                   
 ### 9. Implement a C program to list all files in the current directory?
 ```c
@@ -247,7 +247,7 @@ int main()
     }
     printf("the size of the file is %ld\n",size.st_size);
 }
-```c
+```
 ### 11. Develop a C program to check if a directory named "Test" exists in the current directory?
 ```c
 #include<stdio.h>
@@ -263,7 +263,7 @@ int main()
     else
         printf("the directory already exists\n");
 }
-```c
+```
 
 ### 12. Implement a C program to create a new directory named "Backup" in the parent directory?
 ```c
@@ -280,7 +280,7 @@ int main()
     else
         printf("the directory creation failed\n");
 }
-```c
+```
 
 ### 13. Write a C program to recursively list all files and directories in a given directory?
 ```c
@@ -322,7 +322,7 @@ int main(int argc,char *argv[])
         start_path=argv[1];
     list_files(start_path);
 }
-```c
+```
 
 ###  14. Develop a C program to delete all files in a directory named "Temp"?
 ```c
@@ -366,7 +366,7 @@ int main()
     closedir(dir);
     return 0;
 }
-```c
+```
 
 ### 15. Implement a C program to count the number of lines in a file named "data.txt"?
 ```c
@@ -400,7 +400,7 @@ int main()
     }
     printf("the no of lines in a file are %d\n",count);
 }
-```c
+```
 
 ### 16. Write a C program to append "Goodbye!" to the end of an existing file named "message.txt"?
 ```c
@@ -430,7 +430,7 @@ int main()
     printf("the append content is added successfully\n");
     
 }
-```c
+```
 
 ### 17. Implement a C program to change the permissions of a file named "file.txt" to readonly?
 ```c
