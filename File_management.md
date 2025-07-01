@@ -446,7 +446,7 @@ int main()
     else
         printf("permissions are changed to read only\n");
 }
-```c
+```
 
 ### 18. Write a C program to change the ownership of a file named "file.txt" to the user "user1"?
 ```c
@@ -475,7 +475,7 @@ int main()
     }
     printf("the ownerships is changed successfully\n");
 }
-```c
+```
 
 ### 19. Develop a C program to get the last modified timestamp of a file named "file.txt"?
 ```c
@@ -493,7 +493,7 @@ int main()
     }
     printf("the last modified time of file is %s\n",ctime(&file_stat.st_mtime));
 }
-```c
+```
 
 ### 20. Implement a C program to create a temporary file and write some data to it?
 ```c
@@ -522,7 +522,7 @@ int main()
     }
     printf("the data is written successfully to file\n");
 }
-```c
+```
 
 ### 21. Write a C program to check if a given path refers to a file or a directory?
 ```c
@@ -547,7 +547,7 @@ int main()
     else
         printf("the file is not a regular file or directory\n");
 }
-```c
+```
 
 ### 22. Develop a C program to create a hard link named "hardlink.txt" to a file named "source.txt"?
 ```c
@@ -563,7 +563,7 @@ int main()
         printf("failed to create hardlink\n");
 }
 Hardlink is creating another label name for same inode object.
-```c
+```
 
 ### 23. Implement a C program to read and display the contents of a CSV file named "data.csv"?
 ```c
@@ -591,7 +591,7 @@ int main()
     buf[ret]='\0';
     printf("the contents in csv file are %s\n",buf);
 }
-```c
+```
 
 ### 24. Write a C program to get the absolute path of the current working directory?
 ```c
@@ -606,8 +606,7 @@ int main()
     else
         printf("unable to get the current working directory\n");
 }
-```c
----------------------------------------------------------------------------------------------------------------------------
+```
 25. Develop a C program to get the size of a directory named "Documents"?
 26. Implement a C program to recursively copy all files and directories from one directory to another?
 27. Write a C program to get the number of files in a directory named "Images"?
