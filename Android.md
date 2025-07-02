@@ -1,5 +1,4 @@
 
-
 ## Introduction to Android
 
     Android is an open-source mobile operating system developed by Google.
@@ -25,7 +24,7 @@
 ---
 
 
-**Android Architecture:**
+## Android Architecture:
 
     Android architecture is structured in layers:
     
@@ -54,7 +53,9 @@
     
     Applications: Pre-installed and user-installed apps.
 
-**Difference Between Linux OS and Android OS**
+---
+
+## Difference Between Linux OS and Android OS
 
 | Feature/Aspect            | **Linux OS**                                              | **Android OS**                                                     |
 | ------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------ |
@@ -84,8 +85,34 @@
 
 | **Usage Purpose**         | General computing, development, servers                   | Mobile computing, apps, touch-based UI                             |
 
+---
 
-**Android Boot Process (When You Power On):**
+## What is Booting?
+Booting is the process of starting or restarting the system by loading the operating system into memory.
+
+---
+## Types of Boot
+**Hard Boot**
+- It is also called as cold boot.
+- Booting a system from a powered off state.
+- Happens when the device is turned on.
+- **Example:** Turning on your PC using the power button.
+
+---
+**Soft Boot**
+- It is also called as warm boot.
+- Restarting the system without turning off the power.
+- Triggered by OS restart, reset button, or a software command.
+- **Example:** Clicking Restart in Windows.
+
+---
+**Dual Boot**
+- Booting into more than one OS (user selects one during startup).
+- Example: Windows + Linux on one machine.
+
+---
+
+## Android Boot Process (When You Power On):
 
     **Bootloader:** Initializes hardware and loads the kernel.
     
@@ -98,6 +125,8 @@
     **System Server:** Starts Android’s core services (WindowManager, PackageManager, etc.).
     
     **Home/Launcher App:**The main screen you see (with icons and widgets) starts.
+---
+
 
    
     
