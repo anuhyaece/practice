@@ -60,30 +60,19 @@
 | Feature/Aspect            | **Linux OS**                                              | **Android OS**                                                     |
 | ------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------ |
 | **Target Devices**        | Servers, desktops, embedded systems                       | Smartphones, tablets, smart TVs, wearables                         |
-
 | **User Interface**        | Typically uses desktop environments (GNOME, KDE)          | Mobile GUI with touch-based interface                              |
-
 | **Kernel**                | Linux kernel                                              | Modified Linux kernel (with Android-specific changes)              |
-
 | **Developed By**          | Community, Linux Foundation                               | Google (based on Linux kernel)                                     |
-
 | **File System Hierarchy** | Standard Linux file system (`/etc`, `/bin`, `/usr`, etc.) | Customized file system for mobile (e.g., `/data`, `/system`)       |
-
 | **Application Format**    | Executables (`.out`, `.elf`) or packages (`.deb`, `.rpm`) | APK (Android Package) files                                        |
-
 | **Package Management**    | APT, YUM, DNF, etc.                                       | Google Play Store, ADB install, sideloading                        |
-
 | **Default Shell**         | Bash, Zsh                                                 | No user-visible shell (though shell exists under-the-hood via ADB) |
-
 | **Programming Language**  | Mostly C, C++, Python, Bash scripting                     | Java, Kotlin, XML (for UI), C/C++ (NDK)                            |
-
 | **System Access**         | Full root access available to user                        | Root access restricted by default (can be unlocked)                |
-
 | **Multitasking**          | True multitasking                                         | Managed multitasking (background limits)                           |
-
 | **System Services**       | Init/Systemd for booting and services                     | Android Init, Zygote, Binder, and custom daemons                   |
-
 | **Usage Purpose**         | General computing, development, servers                   | Mobile computing, apps, touch-based UI                             |
+
 
 ---
 
@@ -111,20 +100,26 @@ Booting is the process of starting or restarting the system by loading the opera
 - Example: Windows + Linux on one machine.
 
 ---
+**Fast Boot**
+- Fast Boot is a feature that reduces boot time by skipping certain hardware checks and initializations during startup.
+- Skips some initial checks (like POST) to speed up the booting process.
 
-## Android Boot Process (When You Power On):
+---
+**Secure Boot**
+- Secure Boot is a security feature that prevents unauthorized or malicious code from running during the boot process.
+- A UEFI feature that ensures only trusted software is loaded during boot.
 
-    **Bootloader:** Initializes hardware and loads the kernel.
-    
-    **Linux Kernel:** Starts managing CPU, memory, drivers.
-    
-    **Init:** Android’s init process starts system services (like Wi-Fi, Bluetooth).
-    
-    **Zygote:** A special process that loads common app code (Java libraries) and starts apps quickly by forking.
-    
-    **System Server:** Starts Android’s core services (WindowManager, PackageManager, etc.).
-    
-    **Home/Launcher App:**The main screen you see (with icons and widgets) starts.
+---
+
+## Android Boot Process (When You Power On)
+
+- **Bootloader:** Initializes hardware and loads the kernel.  
+- **Linux Kernel:** Starts managing CPU, memory, drivers.  
+- **Init:** Android’s init process starts system services (like Wi-Fi, Bluetooth).  
+- **Zygote:** A special process that loads common app code (Java libraries) and starts apps quickly by forking.  
+- **System Server:** Starts Android’s core services (WindowManager, PackageManager, etc.).  
+- **Home/Launcher App:** The main screen you see (with icons and widgets) starts.  
+
 ---
 
 
