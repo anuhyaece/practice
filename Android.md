@@ -1,6 +1,6 @@
-```c
 
-**Introduction to Android**
+
+## Introduction to Android
 
     Android is an open-source mobile operating system developed by Google.
     
@@ -10,7 +10,9 @@
     
     Written primarily in Java and Kotlin.
 
-**Key Features:**
+---
+
+## Key Features:
 
     Open-source and customizable
     
@@ -19,6 +21,8 @@
     Rich APIs for UI, camera, GPS, sensors, etc.
     
     Backed by Google with regular updates
+
+---
 
 
 **Android Architecture:**
