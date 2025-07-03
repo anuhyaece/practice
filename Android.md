@@ -59,6 +59,8 @@
 | **Multitasking**          | True multitasking                                         | Managed multitasking (background limits)                           |
 | **System Services**       | Init/Systemd for booting and services                     | Android Init, Zygote, Binder, and custom daemons                   |
 | **Usage Purpose**         | General computing, development, servers                   | Mobile computing, apps, touch-based UI                             |
+
+
 In Linux we have **IPC** mechanisms to communicate between two processes, In android we have **Binder IPC** to communicate between two processes.
 
 ---
