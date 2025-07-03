@@ -219,7 +219,7 @@
 ![image](https://github.com/user-attachments/assets/7ae9c6d0-6378-47fa-885f-8d54ff519a36)
 
 ---
-## 🔄 Difference Between Linux and Android Architecture
+## Difference Between Linux and Android Architecture
 
 | Feature                  | Linux Architecture                                      | Android Architecture                                             |
 |--------------------------|---------------------------------------------------------|------------------------------------------------------------------|
