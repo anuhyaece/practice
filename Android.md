@@ -109,7 +109,6 @@ Booting is the process of starting or restarting the system by loading the opera
 
 ---
 ## Difference betwwen Linux boot and Android boot
-# Linux Boot vs Android Boot - One Table Comparison
 
 | Feature                  | Linux Boot Process                                    | Android Boot Process                                     |
 |--------------------------|--------------------------------------------------------|-----------------------------------------------------------|
