@@ -14,28 +14,30 @@
 - Backed by Google with regular updates
 
 ---
+## 🆚 Linux OS vs Android OS – Sentence-wise Comparison
 
+1. **Linux OS** is a general-purpose operating system used in desktops, servers, and embedded systems.  
+   **Android OS** is a mobile operating system built on top of the Linux kernel, mainly for smartphones and tablets.
 
-## Difference Between Linux OS and Android OS
+2. **Linux** uses desktop environments like **GNOME** or **KDE**, while **Android** has its own **touch-based user interface**.
 
-| Feature/Aspect            | **Linux OS**                                              | **Android OS**                                                     |
-| ------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------ |
-| **Target Devices**        | Servers, desktops, embedded systems                       | Smartphones, tablets, smart TVs, wearables                         |
-| **User Interface**        | Typically uses desktop environments (GNOME, KDE)          | Mobile GUI with touch-based interface                              |
-| **Kernel**                | Linux kernel                                              | Modified Linux kernel (with Android-specific changes)              |
-| **Developed By**          | Community, Linux Foundation                               | Google (based on Linux kernel)                                     |
-| **File System Hierarchy** | Standard Linux file system (`/etc`, `/bin`, `/usr`, etc.) | Customized file system for mobile (e.g., `/data`, `/system`)       |
-| **Application Format**    | Executables (`.out`, `.elf`) or packages (`.deb`, `.rpm`) | APK (Android Package) files                                        |
-| **Package Management**    | APT, YUM, DNF, etc.                                       | Google Play Store, ADB install, sideloading                        |
-| **Default Shell**         | Bash, Zsh                                                 | No user-visible shell (though shell exists under-the-hood via ADB) |
-| **Programming Language**  | Mostly C, C++, Python, Bash scripting                     | Java, Kotlin, XML (for UI), C/C++ (NDK)                            |
-| **System Access**         | Full root access available to user                        | Root access restricted by default (can be unlocked)                |
-| **Multitasking**          | True multitasking                                         | Managed multitasking (background limits)                           |
-| **System Services**       | Init/Systemd for booting and services                     | Android Init, Zygote, Binder, and custom daemons                   |
-| **Usage Purpose**         | General computing, development, servers                   | Mobile computing, apps, touch-based UI                             |
+3. **Linux applications** are usually written in **C/C++** and run natively,  
+   whereas **Android apps** are written in **Java/Kotlin** and run using the **Android Runtime (ART)**.
 
+4. **Linux OS** provides **full system access** to users and developers,  
+   while **Android OS** uses **sandboxing** to isolate each app for better security.
 
-In Linux we have **IPC** mechanisms to communicate between two processes, In android we have **Binder IPC** to communicate between two processes.
+5. **Linux** uses traditional package formats like `.deb` or `.rpm`,  
+   while **Android** uses `.apk` files to install apps.
+
+6. **Linux** accesses hardware **directly** via device drivers,  
+   whereas **Android** uses a **Hardware Abstraction Layer (HAL)** between the system and hardware.
+
+7. **Linux** boot process typically starts with **BIOS/UEFI → Bootloader → Kernel → Init**,  
+   while **Android** starts with **Bootloader → Kernel → Zygote → System Server → Apps**.
+
+8. In Linux we have **IPC** mechanisms to communicate between two processes,
+   In android we have **Binder IPC** to communicate between two processes.
 
 ---
 
@@ -215,6 +217,20 @@ In Linux we have **IPC** mechanisms to communicate between two processes, In and
 - **Driver Model** – Lets Android work with different hardware using built-in drivers.
 
 ![image](https://github.com/user-attachments/assets/7ae9c6d0-6378-47fa-885f-8d54ff519a36)
+
+---
+## 🔄 Difference Between Linux and Android Architecture
+
+| Feature                  | Linux Architecture                                      | Android Architecture                                             |
+|--------------------------|---------------------------------------------------------|------------------------------------------------------------------|
+| **Main Purpose**         | General-purpose OS (desktop/server)                    | Designed for **mobile/embedded devices**                         |
+| **User Interface**       | GUI (GNOME/KDE) or Command Line                         | Android-specific UI (Activities, Views)                          |
+| **Applications**         | Linux native apps                                       | APK apps built with Android SDK                                 |
+| **System Libraries**     | GNU/Linux libraries                                     | Java core libraries + native C/C++ libraries                     |
+| **Runtime**              | No specific runtime                                     | Android Runtime (ART) and Dalvik (older)                         |
+| **Hardware Access**      | Direct via drivers/modules                              | Through **HAL (Hardware Abstraction Layer)**                     |
+| **Package Format**       | `.deb`, `.rpm`                                          | `.apk`                                                           |          |
+| **Boot Process**         | BIOS → Bootloader → Kernel → Init                       | Bootloader → Kernel → **Zygote** → System Server → App           |
 
 
 ---
