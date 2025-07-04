@@ -14,7 +14,7 @@
 - Backed by Google with regular updates
 
 ---
-## 🆚 Linux OS vs Android OS – Sentence-wise Comparison
+## Linux OS vs Android OS – Sentence-wise Comparison
 
 1. **Linux OS** is a general-purpose operating system used in desktops, servers, and embedded systems.  
    **Android OS** is a mobile operating system built on top of the Linux kernel, mainly for smartphones and tablets.
