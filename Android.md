@@ -311,6 +311,7 @@ Booting is the process of starting or restarting the system by loading the opera
 ---
 
 ## Downloading and Building Source code
+**OverView:**
 - repo init manifest.xml
 - repo sync
 - cd apps/LINUX/android
@@ -322,6 +323,80 @@ Booting is the process of starting or restarting the system by loading the opera
 - **userdebug:** Engineering build W/O root(possible to root) and it is used for testing and debugging.
 - **user:** production build W/O root(different kernel config).
 - **eng:** Engineering build W/root.
+
+---
+## Steps to download source code and build
+- Initially, we have to create a separate directory for Android, then go to that folder.
+- Software tool: visual studio code.
+**step-1:** we have to download repo tool by using **sudo apt-get install repo**.
+**step-2:** we have to give our git ceredentials
+            git config --global user.name $GITNAME
+            git config --global user.email $GITEMAIL
+**step-3:** we have to install some packages by using below command.
+              sudo apt-get update
+              sudo apt-get install -y \
+              build-essential \
+              checkinstall \
+              curl \
+              wget \
+              git \
+              git-core \
+              bc \
+              python3 \
+              gawk \
+              gnupg \
+              flex \
+              bison \
+              zip \
+              curl \
+              zlib1g-dev \
+              gcc-multilib \
+              g++-multilib \
+              libc6-dev-i386 \
+              x11proto-core-dev \
+              libx11-dev \
+              lib32z1-dev \
+              libgl1-mesa-dev \
+              libxml2-utils \
+              xsltproc \
+              unzip \
+              fontconfig \
+              libreadline-dev \
+              libncursesw5-dev \
+              libssl-dev \
+              libsqlite3-dev \
+              tk-dev \
+              libgdbm-dev \
+              libc6-dev \
+              libbz2-dev \
+              silversearcher-ag \
+              cpio \
+              lz4 \
+              python-is-python3
+**step-3:** Install android source code using repo tool by giving below command.
+             **repo init -u https://github.com/TinkerBoard-Android/rockchip-android-manifest.git -b android11-rockchip -m tinker_board_2 android11-2.0.8.xml**
+  This command initializes Android build environment for Tinker Board 2 with Android 11 using the manifest version 2.0.8
+            **repo sync -j4**
+  This command is used to download the sources which is mentioned in manifest.
+**step-4:** kernel/drivers/media/i2c/cam_sensor/cam_imx219.c in this file we have to comment out struct device_node *node=dev->of_node.
+**step-5:** To prepare our terminal for building Android by setting environment variables and functions like lunch, m, mm **source build/envsetup.sh**.
+**step-6:**  **lunch WW_Tinker_Board_2-userdebug** used to set the build configuration for tinker board and build variant.
+**step-7:** **./build.sh -UKAu -J 4**
+            This command is used to build the u-boot,kernel,Android.
+            flag -U is used to build the bootloader whenever the power is on.
+            flag -K is used to build the kernel which is used to interact with drivers.
+            flag -Au is used to build the android system which includes android framework,HALs.
+  **Error**: If we got an error related to libncurses.so.5: No such file or directory.
+  **Resolve:** **wget http://snapshot.debian.org/archive/debian/20180709T083634Z/pool/main/n/ncurses/libtinfo5_6.1+20180210-4_amd64.deb
+               sudo dpkg -i libtinfo5_6.1+20180210-4_amd64.deb
+               sudo dpkg --configure libncurses5:amd64**
+               To check the libncurses is installed or not
+               **ldconfig -p | grep libncurses.so.5**
+  Again rebuild the command **./build.sh -UKAu -J 4**
+
+
+
+
    
     
 
