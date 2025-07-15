@@ -489,6 +489,8 @@ ldconfig -p | grep libncurses.so.5
 ```
 
 ---
+### Note: 
+If we want to install an android source code and build that code we need 16GB RAM.
 
 
 
