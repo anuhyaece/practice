@@ -492,6 +492,99 @@ ldconfig -p | grep libncurses.so.5
 ### Note: 
 If we want to install an android source code and build that code we need 16GB RAM.
 
+---
+# Steps to Download Source Code and Build Android for Tinker Board 2
+
+## Prerequisites
+
+- Create a separate directory for Android, then navigate into that folder.
+- Software tool used: **Visual Studio Code**
+
+---
+
+## Step 1: Install `repo` Tool
+
+```bash
+sudo apt-get install repo
+```
+
+---
+
+## Step 2: Configure Git Credentials
+
+```bash
+git config --global user.name "$GITNAME"
+git config --global user.email "$GITEMAIL"
+```
+
+---
+
+## Step 3: Install Required Packages
+
+```bash
+sudo apt-get update
+sudo apt-get install -y \
+git-core \
+gnupg \
+flex \
+bison \
+build-essential \
+zip \
+curl \
+zlib1g-dev \
+libc6-dev-i386 \
+x11proto-core-dev \
+libx11-dev \
+lib32z1-dev \
+libgl1-mesa-dev \
+libxml2-utils \
+xsltproc \
+unzip \
+fontconfig
+
+```
+
+---
+
+## Step 4: Download Android Source Code
+
+### Initialize the repo
+
+```bash
+repo init -u https://github.com/TinkerBoard-Android/rockchip-android-manifest.git -b android12-rockchip -m tinker_board-android12-0.0.5.xml
+```
+
+> This command initializes the Android build environment for Tinker Board R2.0 with Android 12, using manifest version 0.0.5.
+
+### Sync the source
+
+```bash
+repo sync -c -j8
+```
+
+> This command downloads all sources listed in the manifest file.
+
+---
+
+
+###Flashing the Image to sd card
+
+- For flashing an image to sd card we have to download a tool called BalenaEtcher from the website
+https://etcher.balena.io/
+<img width="1366" height="706" alt="balena" src="https://github.com/user-attachments/assets/ba18c3fa-3f5b-43ad-abca-0bcdfaee0078" />
+
+- Goto download etcher in that select etcher for linux 64 and download it.
+- Then we have to extract it go to the path balenaetcher-linux-x64.2.1.2/balenaEtcher-linux-x64.
+- inside that folder we have a output file named as balena-etcher right click on the image then we have a option called Run then 
+we got a window.
+- In terminal we have to give 
+  **curl -L -o balena-etcher_2.1.2_amd64.deb https://github.com/balena-io/etcher/releases/download/v1.19.25/balena-etcher_1.19.25_amd64.deb**
+
+**sudo apt install ./balena-etcher_2.1.2_amd64.deb**
+
+- After that search in home balena etcher the application will successfully downloaded
+---
+
 
 
 
